@@ -43,8 +43,8 @@ if uploaded_files and st.button("Upload selected file(s)"):
             file_name = uploaded_file.name
             upload_path = f"{volume_path}/{file_name}"
 
-            # Files API expects raw bytes or a BinaryIO
-            w.files.upload(path=upload_path, contents=file_bytes, overwrite=True)
+            # Files API expects BinaryIO when passed positionally
+            w.files.upload(upload_path, io.BytesIO(file_bytes), overwrite=True)
 
         st.success("Upload complete.")
         st.rerun()
