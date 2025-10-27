@@ -1,0 +1,38 @@
+{
+  "version": "v1",
+  "host": "https://dbc-779d0bf6-94c0.cloud.databricks.com",
+  "remote_path": "/Workspace/Shared/desafio-datos-abiertos-pida/Databricks App",
+  "last_modified_times": {
+    ".DS_Store": "2025-10-26T18:05:28.758176848-06:00",
+    "Databricks App/app.py": "2025-10-26T18:07:30.644074855-06:00",
+    "Databricks App/app.yml": "2025-10-26T18:07:54.057571353-06:00",
+    "Databricks App/requirements.txt": "2025-10-26T18:11:51.344260658-06:00",
+    "Datos contraloria/actividad_contractual_instituciones_licitantes_2018-2025.csv": "2025-10-26T18:06:57.955013748-06:00",
+    "Datos contraloria/actividad_contractual_procedimientos_2018-2025.csv": "2025-10-26T18:06:57.955324288-06:00",
+    "Datos contraloria/actividad_contractual_sectores_2018-2025.csv": "2025-10-26T18:06:57.955632829-06:00",
+    "Datos contraloria/actividad_contractual_subpartidas_gastos_2018-2025.csv": "2025-10-26T18:06:57.955979454-06:00",
+    "README.md": "2025-10-26T18:05:39.373913653-06:00"
+  },
+  "local_to_remote_names": {
+    ".DS_Store": ".DS_Store",
+    "Databricks App/app.py": "Databricks App/app.py",
+    "Databricks App/app.yml": "Databricks App/app.yml",
+    "Databricks App/requirements.txt": "Databricks App/requirements.txt",
+    "Datos contraloria/actividad_contractual_instituciones_licitantes_2018-2025.csv": "Datos contraloria/actividad_contractual_instituciones_licitantes_2018-2025.csv",
+    "Datos contraloria/actividad_contractual_procedimientos_2018-2025.csv": "Datos contraloria/actividad_contractual_procedimientos_2018-2025.csv",
+    "Datos contraloria/actividad_contractual_sectores_2018-2025.csv": "Datos contraloria/actividad_contractual_sectores_2018-2025.csv",
+    "Datos contraloria/actividad_contractual_subpartidas_gastos_2018-2025.csv": "Datos contraloria/actividad_contractual_subpartidas_gastos_2018-2025.csv",
+    "README.md": "README.md"
+  },
+  "remote_to_local_names": {
+    ".DS_Store": ".DS_Store",
+    "Databricks App/app.py": "Databricks App/app.py",
+    "Databricks App/app.yml": "Databricks App/app.yml",
+    "Databricks App/requirements.txt": "Databricks App/requirements.txt",
+    "Datos contraloria/actividad_contractual_instituciones_licitantes_2018-2025.csv": "Datos contraloria/actividad_contractual_instituciones_licitantes_2018-2025.csv",
+    "Datos contraloria/actividad_contractual_procedimientos_2018-2025.csv": "Datos contraloria/actividad_contractual_procedimientos_2018-2025.csv",
+    "Datos contraloria/actividad_contractual_sectores_2018-2025.csv": "Datos contraloria/actividad_contractual_sectores_2018-2025.csv",
+    "Datos contraloria/actividad_contractual_subpartidas_gastos_2018-2025.csv": "Datos contraloria/actividad_contractual_subpartidas_gastos_2018-2025.csv",
+    "README.md": "README.md"
+  }
+}
