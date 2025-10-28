@@ -6,7 +6,7 @@ from databricks.sdk import WorkspaceClient
 # Initialize Databricks client
 w = WorkspaceClient()
 
-st.title("Consulta sobre Documentos")
+st.title("Document Inquiry")
 
 # Fixed UC volume configuration
 CATALOG = "workspace"
@@ -14,10 +14,10 @@ SCHEMA = "default"
 VOLUME = "unstructured_rag_pida"
 volume_path = f"/Volumes/{CATALOG}/{SCHEMA}/{VOLUME}"
 
-# Nota: El volumen de almacenamiento está preconfigurado
+# Note: The storage volume is preconfigured
 
-# Listar archivos disponibles
-st.subheader("Archivos disponibles")
+# List available files
+st.subheader("Available Files")
 try:
     files = list(w.files.list_directory_contents(volume_path))
 
@@ -31,21 +31,21 @@ try:
                 if st.button("✕", key=f"delete_{file_item.path}"):
                     try:
                         w.files.delete(file_item.path)
-                        st.success(f"Archivo eliminado: {file_name}")
+                        st.success(f"File deleted: {file_name}")
                         st.rerun()
                     except Exception as e:
-                        st.error(f"Error al eliminar: {str(e)}")
+                        st.error(f"Error deleting: {str(e)}")
     else:
-        st.info("No se encontraron archivos")
+        st.info("No files found")
 
 except Exception as e:
-    st.error(f"Error al listar archivos: {str(e)}")
+    st.error(f"Error listing files: {str(e)}")
 
-# Cargar archivos
-st.subheader("Cargar archivo(s)")
-uploaded_files = st.file_uploader("Seleccione archivo(s) para cargar", accept_multiple_files=True)
+# Upload files
+st.subheader("Upload File(s)")
+uploaded_files = st.file_uploader("Select file(s) to upload", accept_multiple_files=True)
 
-if uploaded_files and st.button("Cargar archivo(s) seleccionado(s)"):
+if uploaded_files and st.button("Upload selected file(s)"):
     try:
         for uploaded_file in uploaded_files:
             # Read bytes reliably from Streamlit's UploadedFile
@@ -56,7 +56,7 @@ if uploaded_files and st.button("Cargar archivo(s) seleccionado(s)"):
             # Files API expects BinaryIO when passed positionally
             w.files.upload(upload_path, io.BytesIO(file_bytes), overwrite=True)
 
-        st.success("Carga completada.")
+        st.success("Upload complete.")
         st.rerun()
     except Exception as e:
-        st.error(f"Error al cargar archivo(s): {str(e)}")
+        st.error(f"Error uploading file(s): {str(e)}")
